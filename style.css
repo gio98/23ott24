@@ -49,6 +49,19 @@ canvas {
   font-size: 140px;
 }
 
+#greeting-letter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 100;
+  font-size: 110px;
+  width: 80%;
+}
+
+
 #greeting {
   color: #fff;
   text-align: center;
@@ -63,6 +76,13 @@ canvas {
   color: #fff;
   text-align: center;
   opacity: 0;
+}
+
+#greeting-letter p {
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  font-size: 20%;
 }
 
 #img1 {

@@ -9,11 +9,17 @@ startBtn.style.opacity = btnOpacity;
 let timer = 0;
 
 const greetingText = document.querySelector('#greeting-container');
+const greetingletter = document.querySelector('#greeting-letter');
 const secretMessageText = document.querySelector('#greeting-container p');
+const letter = document.querySelector('#greeting-letter p');
 let greetingOpacity = 0;
 let secretMsgOpacity = 0;
+let letterOpacity = 0;
+let letterpOpacity = 0;
 let flag = false;
 let secretMsg = false;
+let letterMsg = false;
+let letterp = false;
 
 let fireworksArr = [];
 let explosionsArr = [];
@@ -105,6 +111,16 @@ window.onload = () => {
     if (greetingText.style.opacity > 1) greetingText.style.opacity = 1;
   }
   
+
+  
+  const showletter = () => {
+    if (greetingletter.style.opacity < 1) {
+      letterOpacity += 0.01;
+      greetingletter.style.opacity = letterOpacity;
+      requestAnimationFrame(showletter);
+    }
+    if (greetingletter.style.opacity > 1) greetingletter.style.opacity = 1;
+  }
   const showSecretMsg = () => {
     console.log('secret message');
     if (secretMessageText.style.opacity < 1) {
@@ -115,6 +131,16 @@ window.onload = () => {
     if (greetingText.style.opacity > 1) greetingText.style.opacity = 1;
   }
   
+  const showletterMsg = () => {
+  
+    if (letter.style.opacity < 1) {
+      letterpOpacity += 0.01;
+      letter.style.opacity = letterpOpacity;
+      requestAnimationFrame(showletterMsg);
+    }
+    if (letter.style.opacity > 1) letter.style.opacity = 1;
+  }
+
   const getYVelocity = () => {
     let yVel = Math.random() * (canvas.height / -80 - 10);
     if (yVel > -12 && yVel < -16) {
@@ -178,6 +204,20 @@ window.onload = () => {
      
     }
     
+    if (timer > 200 && !letterMsg && !letterp) {
+
+      greetingOpacity = 0;
+      greetingText.style.opacity = greetingOpacity;
+ 
+
+
+      letterMsg=true;
+      showletter();
+      letterp = true;
+      showletterMsg();
+
+    }
+
     // if (explosionsArr.length > 0) console.log(explosionsArr[0].opacity);
     
     timer++;
