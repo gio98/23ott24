@@ -11,10 +11,10 @@ const text = [
   "Feliz aniversario al amor de mi vida, gracias por existir, tú que eres la persona más increíble y extraordinaria de mi vida, que me completa en cada momento y que haces que mi corazón explote de infinita felicidad, que me das una fuerza infinita capaz de hacerme tocar el cielo con un dedo.",
   "Aquí estamos nuevamente este año con nuestro amor infinito, hemos llegado a nuestro hermoso día que llega como una sorpresa navideña y es un día extraordinario de celebración, como cada día hermoso y único que paso contigo a tu lado.",
   "Hoy estoy aquí amor de mi vida para decirte gracias inmensamente y lo haré en cada momento de mi vida y más allá por haber entrado en mi vida y por estar aquí a mi lado brindándome todo tu precioso amor, que cada día hace mi vida especial y me ha hecho cada día que pasa una mejor persona.",
-  "Todo esto gracias a ti por la persona increíble que eres con tu dulce sonrisa, que hace que mi corazón lata más rápido y me deja sin aliento, tu infinita dulzura que me llena de felicidad y calma, que me hace sentir segura, lejos de todo mal.",
+  "Todo esto gracias a ti por la persona increíble que eres con tu dulce sonrisa, que hace que mi corazón lata más rápido y me deja sin aliento, tu infinita dulzura que me llena de felicidad y calma, que me hace sentir seguro, lejos de todo mal.",
   "Tu fuerza infinita que desde la pasión que pones desde tu precioso corazón puedes superar desafíos increíbles completando cada obstáculo que la vida te pone frente, y pones todo de ti en ello luchando con uñas y dientes y todo lo que haces.",
   "Cada momento entonces se vuelve único porque lo haces aplicando la pasión que llega al fondo de tu precioso corazón y te tomo como ejemplo desde tu grandiosa fuerza, y aún en esos momentos donde no sé qué hacer pienso en ti.",
-  "Abriendo mi corazón y esto nunca me hace parar porque siento que te tengo aquí en mi corazón, unidos en el alma y juntos amor de mi vida somos capaces de afrontar y vencer todo, y sobre todo siempre recuerdas que todos los días eres el número uno en todo el universo.",
+  "Abriendo mi corazón y esto nunca me hace parar porque siento que te tengo aquí en mi corazón, unidos en el alma y juntos amor de mi vida somos capaces de afrontar y vencer todo, y sobre todo siempre recuerdas que todos los días eres la número uno en todo el universo.",
   "Hasta en los momentos más difíciles recuerda siempre que estaré aquí a tu lado, en las buenas y en las malas y quiero estar aquí a tu lado y proteger con todo de mí tu preciosa alma y tu precioso corazón.",
   "Gracias por cada uno de tus infinitos y cálidos abrazos, donde me siento como un niño envuelto a salvo de todo daño, y me encanta estar aquí todos los días para ser tu almohada mientras te protejo en mis cálidos abrazos.",
   "Gracias por cada uno de tus besos dulces y preciosos que más que oxígeno ese aliento me da vida y fuerza para levantarme de acostarnos y enfrentar la vida juntos.",
@@ -238,7 +238,7 @@ window.onload = () => {
       letterp = true;
       showletterMsg();
       //e.stopPropagation();
-      
+      myaudio.loop = true;
       myaudio.play();
       var text = $('.test').data('text');
       let groupSize = 5; 
@@ -278,7 +278,7 @@ window.onload = () => {
  
   function typeWriter() { 
       if (index < text.length) {
-            myaudio.play();
+          
             document.getElementById("test").innerHTML = text[index];
             index++;
             setTimeout(typeWriter, 16000); // Adjust the delay as needed
@@ -286,6 +286,7 @@ window.onload = () => {
       } else {
           //index = 0; // Reset index to loop the text
           //setTimeout(typeWriter, 9000); // Adjust the delay as needed
+         window.location = "/pl/dist/index.html" 
       }
   }
 
