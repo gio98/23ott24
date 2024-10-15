@@ -1,5 +1,5 @@
 body {
-  background-color: #5c5c5c;
+  background-color: black !important;
 }
 
 .tv {
@@ -662,11 +662,51 @@ crtOff::after {
   font-size: 14px;
 }
 
-@media screen and (max-width: 700px) {
+#greeting-container {
+  
+  visibility: hidden;  
+  }
+
+
+@media screen and (max-width: 1000px) {
   .contain {
     -moz-transform: scale(0.70);
     -o-transform: scale(0.70);
     -webkit-transform: scale(0.70);
     transform: scale(0.70);
+  }
+  #greeting-container {
+    position: absolute;
+    left: 50%;
+    top: 897px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    visibility: visible !important;
+    z-index: 100;
+    font-size: 235px;
+    width: 100;
+  }
+  
+  #greeting {
+    color: gold;
+    text-align: center;
+    font-size: 135px;
+    width: 135%;
+    position: relative;
+    left: -18%;
+    top: 190px;
+  }
+  
+  #greeting-container p {
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+  }
+  
+  #img1 {
+    position: relative;
+    left: 0%;
+    z-index: 99;
+    width: 96%;
   }
 }

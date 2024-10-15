@@ -109,7 +109,7 @@ $(document).ready(function() {
           "...</div></div>";
       }
       $(".screen").append(
-        "<div class='channelList onScreen'><video id='topochannel' src='canzone.mp4'   style='height: 106%;width: 63%;'></video></div>" 
+        "<div class='channelList onScreen'><video id='topochannel' src='canzone.mp4'   style='height: 100%;width: 63%;'></video></div>" 
       );
       $(".screen").append(
         "<div class='channels'>" + channel + ". TOPOCHANNEL</div>"
