@@ -4,6 +4,7 @@ body {
 
 .tv {
   position: relative;
+  top: 1297px;
   width: 700px;
   height: 400px;
   margin: 100px auto 0 auto;
@@ -674,6 +675,8 @@ crtOff::after {
     -o-transform: scale(0.70);
     -webkit-transform: scale(0.70);
     transform: scale(0.70);
+    position: relative;
+        top: -190px;
   }
   #greeting-container {
     position: absolute;
@@ -705,6 +708,7 @@ crtOff::after {
   
   #img1 {
     position: relative;
+    top: -370px;
     left: 0%;
     z-index: 99;
     width: 96%;
