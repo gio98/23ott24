@@ -286,7 +286,7 @@ window.onload = () => {
       } else {
           //index = 0; // Reset index to loop the text
           //setTimeout(typeWriter, 9000); // Adjust the delay as needed
-         window.location = "/pl/dist/index.html" 
+         window.location = "/23ott24/dist/index.html" 
       }
   }
 
